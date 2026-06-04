@@ -1,20 +1,32 @@
 # Matchwright
 
-Matchwright is an OpenAI-powered resume tailoring app that:
+Matchwright is an AI powered resume tailoring app that helps users compare a resume against a job description, identify missing keywords, rewrite relevant bullets, and generate polished application materials without inventing experience.
 
-- Scores a resume against a job description like a senior recruiter.
-- Rewrites role-relevant bullets with the Google XYZ formula.
-- Preserves an existing LaTeX layout when users upload or paste `.tex` source.
-- Reads PDF resumes when source LaTeX is not available.
-- Generates a tailored LaTeX resume, PDF/DOCX exports, and a matching cover letter.
+The project is built around a practical recruiting workflow: upload or paste a resume, paste a job description, receive a match analysis, then generate a targeted resume and cover letter.
 
-The app is built with Vite, React, and a server-side OpenAI proxy.
+## Core Features
 
-## Why Not Browser-Only?
+- Resume to job description match scoring
+- AI generated bullet rewrites using the Google XYZ style
+- LaTeX aware resume tailoring for users who want to preserve formatting
+- PDF resume reading when LaTeX source is not available
+- Tailored resume, cover letter, and export focused workflow
+- Server side OpenAI proxy so API keys are never exposed in browser JavaScript
+- Safety guardrails that tell the model not to invent employers, dates, degrees, tools, certifications, or metrics
 
-Resume tailoring requires model calls. A public website cannot safely put an API key in frontend JavaScript, so Matchwright uses `/api/openai` as a backend route. Visitors do not need their own API key, but the deployed site owner pays for OpenAI usage.
+## Why This Project Matters
 
-Before sharing publicly, add authentication, usage limits, or a credit/payment system if you do not want open-ended API spend.
+Most students apply with generic resumes. Matchwright turns resume tailoring into a repeatable software workflow by combining document parsing, prompt engineering, frontend UX, and server side model calls.
+
+## Tech Stack
+
+| Area | Tools |
+|---|---|
+| Frontend | Vite, React |
+| Backend | Serverless API route |
+| AI | OpenAI API |
+| Documents | PDF input, LaTeX input/output |
+| Deployment | Vercel ready |
 
 ## Local Setup
 
@@ -24,35 +36,42 @@ cp .env.example .env
 npm run dev
 ```
 
-Set `OPENAI_API_KEY` in `.env`.
+Add your API key:
 
-Optional:
-
-```bash
-OPENAI_MODEL=gpt-5.5
+```text
+OPENAI_API_KEY=your_key_here
 ```
 
-The default model is `gpt-5.4-mini` to keep costs lower. Use `gpt-5.5` for stronger reasoning and writing quality.
+Optional model setting:
+
+```text
+OPENAI_MODEL=gpt-5.4-mini
+```
 
 ## Deploy To Vercel
 
-1. Push this repo to GitHub.
-2. Import the repo in Vercel.
+1. Push the repository to GitHub.
+2. Import it into Vercel.
 3. Add environment variables:
    - `OPENAI_API_KEY`
-   - `OPENAI_MODEL` optional, defaults to `gpt-5.4-mini`
+   - `OPENAI_MODEL` optional
 4. Deploy.
 
-Vercel uses:
+Vercel uses `npm run build`, the `dist` output folder, and `api/openai.js` as the serverless OpenAI proxy.
 
-- `npm run build`
-- `dist` as the static output
-- `api/openai.js` as the serverless OpenAI proxy
+## Product Notes
 
-## Resume Layout Notes
+Before sharing the app publicly, add authentication, usage limits, rate limiting, or a payment system. Without those controls, public users could trigger API spend through the deployed endpoint.
 
-For exact layout preservation, use `.tex` input. PDFs can be read by the model, but they do not contain the original LaTeX source, macros, or spacing commands.
+## Recruiter Notes
 
-## Safety Notes
+This project demonstrates practical AI product development, frontend engineering, API design, prompt safety, document handling, and deployment awareness. It is strongest as a portfolio project because it solves a real student and job seeker problem.
 
-Matchwright is designed to improve truthful positioning, not fabricate credentials. The prompt explicitly tells the model not to invent employers, dates, degrees, certifications, tools, or metrics that are not supported by the resume.
+## Future Improvements
+
+- Add user authentication
+- Add rate limiting and usage quotas
+- Add saved resume versions
+- Add keyword gap explanations
+- Add side by side diff view for generated resume changes
+- Add automated tests for prompt and API behavior
