@@ -1,0 +1,43 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f7faf7"/>
+      <stop offset="0.55" stop-color="#eef4f6"/>
+      <stop offset="1" stop-color="#fff5ee"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#211f1b" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="800" fill="url(#bg)"/>
+  <text x="80" y="78" fill="#0f8b8d" font-family="JetBrains Mono, monospace" font-size="15" letter-spacing="4">AI RESUME TAILOR</text>
+  <text x="80" y="150" fill="#14201d" font-family="Georgia, serif" font-size="62" font-weight="700">Matchwright</text>
+  <text x="80" y="196" fill="#47524e" font-family="Arial, sans-serif" font-size="22">Tailor resumes to job descriptions with honest scoring, LaTeX preserving rewrites, and cover letters.</text>
+  <g filter="url(#shadow)">
+    <rect x="80" y="250" width="530" height="310" rx="6" fill="#ffffff" stroke="#d5dedc"/>
+    <text x="112" y="296" fill="#78847f" font-family="JetBrains Mono, monospace" font-size="15" letter-spacing="2">01 RESUME INPUT</text>
+    <rect x="112" y="326" width="466" height="170" rx="5" fill="#fffdf8" stroke="#d5dedc" stroke-dasharray="8 8"/>
+    <text x="260" y="405" fill="#0f8b8d" font-family="Arial, sans-serif" font-size="48">↑</text>
+    <text x="217" y="447" fill="#14201d" font-family="Arial, sans-serif" font-size="20" font-weight="700">Upload PDF or paste LaTeX</text>
+    <text x="190" y="475" fill="#78847f" font-family="JetBrains Mono, monospace" font-size="14">PDF • TEX • TXT</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="670" y="250" width="530" height="310" rx="6" fill="#ffffff" stroke="#d5dedc"/>
+    <text x="702" y="296" fill="#78847f" font-family="JetBrains Mono, monospace" font-size="15" letter-spacing="2">02 JOB DESCRIPTION</text>
+    <rect x="702" y="326" width="466" height="170" rx="5" fill="#fffdf8" stroke="#d5dedc"/>
+    <rect x="730" y="356" width="375" height="12" rx="6" fill="#d5dedc"/>
+    <rect x="730" y="388" width="420" height="12" rx="6" fill="#d5dedc"/>
+    <rect x="730" y="420" width="335" height="12" rx="6" fill="#d5dedc"/>
+    <rect x="730" y="452" width="390" height="12" rx="6" fill="#d5dedc"/>
+  </g>
+  <rect x="80" y="610" width="290" height="58" rx="5" fill="#0f8b8d"/>
+  <text x="118" y="647" fill="#fff5ef" font-family="Arial, sans-serif" font-size="20" font-weight="700">Analyze Match</text>
+  <text x="400" y="646" fill="#78847f" font-family="JetBrains Mono, monospace" font-size="15">AI scoring • bullet rewrites • cover letter</text>
+  <g filter="url(#shadow)">
+    <rect x="800" y="600" width="300" height="96" rx="8" fill="#ffffff" stroke="#d5dedc"/>
+    <circle cx="852" cy="648" r="31" fill="#eaf1ec" stroke="#2f855a"/>
+    <text x="835" y="657" fill="#2f855a" font-family="Georgia, serif" font-size="28" font-weight="700">87</text>
+    <text x="908" y="638" fill="#14201d" font-family="Arial, sans-serif" font-size="18" font-weight="700">Strong Match</text>
+    <text x="908" y="664" fill="#47524e" font-family="Arial, sans-serif" font-size="14">Keyword gaps and fixes generated</text>
+  </g>
+</svg>
