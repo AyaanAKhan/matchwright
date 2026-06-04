@@ -1,5 +1,7 @@
 # Matchwright
 
+![Matchwright UI Preview](docs/screenshots/matchwright-ui-preview.svg)
+
 Matchwright is an AI powered resume tailoring app that helps users compare a resume against a job description, identify missing keywords, rewrite relevant bullets, and generate polished application materials without inventing experience.
 
 The project is built around a practical recruiting workflow: upload or paste a resume, paste a job description, receive a match analysis, then generate a targeted resume and cover letter.
